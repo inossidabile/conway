@@ -14,6 +14,7 @@ class IterationsController < ApplicationController
     raise ActionController::BadRequest("Count parameter missing") if (count = params[:count].to_i).blank?
 
     iterations = Iteration
+      .order(:id)
       .where(board_id: iteration_params[:board_id])
       .offset(cursor.offset)
       .limit(count)
@@ -26,6 +27,7 @@ class IterationsController < ApplicationController
 
   def next
     iterations = Iteration
+      .order(:id)
       .where(board_id: iteration_params[:board_id])
       .offset(cursor.offset)
       .limit(1)
