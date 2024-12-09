@@ -6,7 +6,7 @@ gem "rails", "~> 7.2.1"
 gem "pg", "~> 1.5"
 
 gem "aasm", "~> 5.5"
-gem "after_commit_everywhere", "~> 1.0"
+gem "after_commit_everywhere", "~> 1.5"
 
 gem "sidekiq", "~> 7.3"
 
